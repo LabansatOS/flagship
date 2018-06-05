@@ -23,7 +23,7 @@
         
         <div id="trumbowyg">
         </div>
-        <div v-on:click="submit" style="display: flex; justify-content: center;" class="admin-form__button">Crear post</div>
+        <div v-on:click="submit" style="display: flex; justify-content: center; cursor:pointer;" class="admin-form__button">Crear post</div>
     </div>
 </template>
 
@@ -46,8 +46,8 @@
         methods: {
             submit: function() {
                 this.html = $('#trumbowyg').trumbowyg('html');
-
-                axios.post('/blog', {
+                self = this;
+                axios.post('/api/projects', {
                     content: this.html,
                     title: this.title,
                     video: this.video,
@@ -59,7 +59,7 @@
                    
                 })
                 .then(function (response) {
-                    console.log(response);
+                    self.$router.push({ path: '/' });
                 })
                 .catch(function (error) {
                     console.log(error);

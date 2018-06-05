@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Project;
 use Illuminate\Http\Request;
 
@@ -38,14 +39,14 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $project = new Project;
+        $user = Auth::user()->id;
 
+        $project->user_id = $user;
+        $project->title = $request->title;
         $project->video = $request->video;
         $project->summary = $request->summary;
         $project->location = $request->location;
-        $project->total = $request->total;
         $project->objective = $request->objective;
-        $project->backers = $request->backers;
-        $project->end_date = $request->end_date;
         $project->content = $request->content;
 
         $project->save();

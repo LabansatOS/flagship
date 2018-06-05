@@ -20,10 +20,10 @@ class CreateProjectsTable extends Migration
             $table->string('video');
             $table->string('summary');
             $table->string('location');
-            $table->float('total');
-            $table->float('objective');
-            $table->unsignedInteger('backers');
-            $table->dateTime('end_date');
+            $table->float('total', 12, 2)->default(0);
+            $table->float('objective', 12, 2);
+            $table->unsignedInteger('backers')->default(0);
+            $table->dateTime('end_date')->nullable();
             $table->text('content');
             $table->timestamps();
         });

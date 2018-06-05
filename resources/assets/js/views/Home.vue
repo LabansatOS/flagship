@@ -2,7 +2,10 @@
   <div>
     <div class="header">
       <div class="navbar">
-        <img class="navbar__logo" src="http://flagship.mx/wp-content/uploads/2018/03/LogoMakr_6WpvRA-e1520960282853.png">
+        <!-- <img class="navbar__logo" src="http://flagship.mx/wp-content/uploads/2018/03/LogoMakr_6WpvRA-e1520960282853.png"> -->
+        <div class="navbar__logo" @click="$router.push({ path: '/' })">
+          Flagship
+        </div>
         <div class="navbar__search">
 
         </div>
@@ -10,10 +13,19 @@
 
         </div>
       </div>
+      <div class="header__content">
+        Invertir en las mejores marcas del país nunca había sido tan fácil
+      </div>
     </div>
     <div class="projects-wrapper">
       <div class="projects">
-        <div class="project-card" v-for="project in projects" :key="project.id" @click="">
+        <div class="projects__header">
+          Proyectos
+          <div class="button">
+            Ver más
+          </div>
+        </div>
+        <div class="project-card" v-for="project in projects" :key="project.id" @click="$router.push({ path: `/project/${project.id}` })">
           <div class="project-card__image">
 
           </div>
@@ -35,12 +47,13 @@
           <div class="project-card__stats">
             <div class="project-card__stat">
               50%
+               <span>completado</span>
             </div>
             <div class="project-card__stat">
-              3 dias
+              3 <span>dias</span>
             </div>
             <div class="project-card__stat">
-              0
+              0 <span>patrocinadores</span>
             </div>
           </div>
         </div>
@@ -75,10 +88,27 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in bibendum arcu. Quisque iaculis velit sit amet pellentesque cursus. Aenean varius faucibus faucibus. In orci ipsum, bibendum vitae ante nec, consequat tempus massa. Sed et dignissim nulla. 
           </div>
         </div>
+        <div class="blog__button-wrapper">
+          <div class="button">
+            Ver más
+          </div>
+        </div>
       </div>
     </div>
-    <div class=footer>
-  
+    <div class="footer-wrapper"> 
+      <div class="footer">
+        <div class="footer__column">
+          <p style="font-weight: 500; font-size: 16px;">Nuestras redes sociales</p>
+
+          <p>Facebook</p>
+          <p>Twitter</p>
+          <p>Instagram</p>
+        </div>
+        <div class="footer__column">
+        </div>
+        <div class="footer__column">
+        </div>
+      </div>
     </div>
   </div>
 </template>
