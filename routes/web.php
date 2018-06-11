@@ -23,4 +23,7 @@ Route::get('/', $returnApp);
 Route::get('/projects', $returnApp);
 Route::get('/project/{id}', $returnApp);
 
+Route::get('/profile', $returnApp);
+Route::get('/profile/{field}', $returnApp);
+
 

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10479,6 +10479,19 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+.navbar__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__link {
+  margin-left: 24px;
+}
+
 .projects-wrapper {
   width: 100vw;
   display: -webkit-box;
@@ -10924,7 +10937,7 @@ a.text-dark:focus {
 }
 
 .bar__current {
-  background-color: #7cc142;
+  background-color: v;
   min-height: 100%;
 }
 
@@ -10957,5 +10970,99 @@ a.text-dark:focus {
   width: 32%;
   padding: 50px 0;
   color: white;
+}
+
+.settings-wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+}
+
+.settings__content {
+  min-width: 78%;
+  max-width: 78%;
+  padding: 5px 30px;
+}
+
+.settings__title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.settings__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.settings__button {
+  background-color: #7cc142;
+  color: white;
+  border: none;
+  padding: 8px 24px;
+  margin: 8px 0;
+  border-radius: 100px;
+}
+
+.settings-nav {
+  min-width: 22%;
+  max-width: 22%;
+  background-color: #f8f9fa;
+  background-color: white;
+  padding: 12px;
+}
+
+.settings-nav__link {
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.input {
+  min-width: 30%;
+  max-width: 30%;
+}
+
+.input__label {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.input__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.input__field--small {
+  min-width: 0;
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 1 auto !important;
+          flex: 0 1 auto !important;
+}
+
+.input--double {
+  min-width: 65%;
+  max-width: 65%;
 }
 

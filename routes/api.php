@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/projects', 'ProjectController@index');
 Route::middleware('auth:api')->post('/projects', 'ProjectController@store');
 Route::get('/project/{id}', 'ProjectController@show');
+
+Route::middleware('auth:api')->post('/profile', 'UserController@update');

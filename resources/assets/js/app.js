@@ -10,6 +10,8 @@ require('./bootstrap');
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+window.Vue = Vue;
+
 Vue.use(VueRouter);
 
 Vue.component('projects-component', require('./components/ProjectsComponent.vue'));
@@ -18,6 +20,12 @@ import App from './views/App'
 import Home from './views/Home';
 import Projects from './views/Projects';
 import Project from './views/Project';
+import UserProfile from './views/UserProfile';
+import BasicData from './views/BasicData.vue';
+import Address from './views/Address';
+import BankAccount from './views/BankAccount';
+import OfficialID from './views/OfficialID';
+import Phones from './views/Phones';
 
 const router = new VueRouter({
   mode: 'history',
@@ -25,6 +33,32 @@ const router = new VueRouter({
     {
       path: '/',
       component: Home,
+    },
+    {
+      path: '/profile',
+      component: UserProfile,
+      children: [
+        {
+          path: 'basic',
+          component: BasicData,
+        },
+        {
+          path: 'address',
+          component: Address,
+        },
+        {
+          path: 'id',
+          component: OfficialID,
+        },
+        {
+          path: 'account',
+          component: BankAccount,
+        },
+        {
+          path: 'phones',
+          component: Phones,
+        },
+      ],
     },
     {
       path: '/projects',
