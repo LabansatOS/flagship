@@ -628,3 +628,33 @@
     margin: 0 20px;
   }
 }
+
+.login {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.login-form {
+  margin-top: 100px;
+  width: 30vw;
+  background-color: white;
+  padding: 20px 40px 40px 40px;
+  border-radius: 12px;
+  margin-left: 200px;
+
+  label {
+    margin: 20px 0;
+  }
+
+  input:last-of-type {
+    margin-top: 40px;
+  }
+
+  button {
+    margin-left: 12px;
+  }
+}

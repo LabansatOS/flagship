@@ -11279,3 +11279,38 @@ a.text-dark:focus {
   margin: 0 20px;
 }
 
+.login {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(/images/background2.jpg?dbeadc7f36255fdada20303a3f19302c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-form {
+  margin-top: 100px;
+  width: 30vw;
+  background-color: white;
+  padding: 20px 40px 40px 40px;
+  border-radius: 12px;
+  margin-left: 200px;
+}
+
+.login-form label {
+  margin: 20px 0;
+}
+
+.login-form input:last-of-type {
+  margin-top: 40px;
+}
+
+.login-form button {
+  margin-left: 12px;
+}
+
