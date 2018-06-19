@@ -10,7 +10,7 @@
     </div>
     <div class="about-wrapper">
       <div class="about">
-        <div class="about__title">Crowdfunding inmobiliario / Fondeo colectivo en restaurantes</div>
+        <div class="about__title">Crowdfunding / Fondeo colectivo en restaurantes</div>
         <div class="about__content">Agrupamos las inversiones de pequeños, medianos y grandes ahorradores, para transformarlos en grandes inversionistas de restaurantes.</div>
         <div class="about__items">
           <div class="about__item">

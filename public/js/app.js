@@ -52805,7 +52805,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "about-wrapper" }, [
       _c("div", { staticClass: "about" }, [
         _c("div", { staticClass: "about__title" }, [
-          _vm._v("Crowdfunding inmobiliario / Fondeo colectivo en restaurantes")
+          _vm._v("Crowdfunding / Fondeo colectivo en restaurantes")
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "about__content" }, [
