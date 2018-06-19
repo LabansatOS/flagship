@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('title');
+            $table->string('image');
             $table->string('video');
             $table->string('summary');
             $table->string('location');

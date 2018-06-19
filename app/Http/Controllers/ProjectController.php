@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -17,6 +18,12 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
+        return $projects;
+    }
+
+    public function indexMain()
+    {
+        $projects = Project::take(3)->get();
         return $projects;
     }
 
@@ -43,6 +50,7 @@ class ProjectController extends Controller
 
         $project->user_id = $user;
         $project->title = $request->title;
+        $project->image = $request->image;
         $project->video = $request->video;
         $project->summary = $request->summary;
         $project->location = $request->location;
@@ -96,5 +104,12 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         //
+    }
+
+    public function saveImage(Request $request)
+    {
+        $path = Storage::putFile('public/projects', $request->file('image'), 'public');
+
+        return substr($path, 7);
     }
 }

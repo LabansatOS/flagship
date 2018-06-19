@@ -3,6 +3,9 @@
         <label for="post-title" class="create__label">Titulo:</label>
         <input v-model="title" type="text" name="title" id="post-title" class="create__input" required>
 
+        <label class="create__label">Imagen:</label>
+        <image-upload url="/api/project/image" @image-uploaded="(url) => { image = url}"></image-upload>
+
         <label for="post-video" class="create__label">Video:</label>
         <input v-model="video" type="text" name="video" id="post-video" class="create__input" required>
         
@@ -33,6 +36,7 @@
         data () {
             return {
                 title: '',
+                image: '',
                 video: '',
                 summary: '',
                 location: '',
@@ -50,6 +54,7 @@
                 axios.post('/api/projects', {
                     content: this.html,
                     title: this.title,
+                    image: this.image,
                     video: this.video,
                     summary: this.summary,
                     location: this.location,

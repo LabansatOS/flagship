@@ -1,22 +1,6 @@
 <template>
 <div>
-  <div class="navbar">
-    <!-- <img class="navbar__logo" src="http://flagship.mx/wp-content/uploads/2018/03/LogoMakr_6WpvRA-e1520960282853.png"> -->
-    <div class="navbar__logo" style="color: black;" @click="$router.push({ path: '/' })">
-        Flagship
-    </div>
-    <div class="navbar__search">
-
-    </div>
-    <div class="navbar__links">
-      <div class="navbar__link">
-        Login
-      </div>
-      <div class="navbar__link">
-        Register
-      </div>
-    </div>
-  </div>  
+  <user-component color="black"></user-component>  
   <div class="settings-wrapper">
     <div class="settings">
       <div class="settings-nav">

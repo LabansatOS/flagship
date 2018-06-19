@@ -18,7 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/projects', 'ProjectController@index');
+Route::get('/projects/main', 'ProjectController@indexMain');
 Route::middleware('auth:api')->post('/projects', 'ProjectController@store');
 Route::get('/project/{id}', 'ProjectController@show');
+Route::middleware('auth:api')->post('/user/image', 'UserController@saveImage');
+Route::middleware('auth:api')->post('/project/image', 'ProjectController@saveImage');
 
 Route::middleware('auth:api')->post('/profile', 'UserController@update');

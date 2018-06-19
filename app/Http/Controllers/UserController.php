@@ -25,7 +25,15 @@ class UserController extends Controller
         $user->state = $request->state;
         $user->zip_code = $request->zip_code;
         $user->clabe = $request->clabe;
+        $user->id_image = $request->id_image;
 
         $user->save();
+    }
+
+    public function saveImage(Request $request)
+    {
+        $path = Storage::putFile('public/ids', $request->file('image'), 'public');
+
+        return substr($path, 7);
     }
 }

@@ -15,6 +15,8 @@ window.Vue = Vue;
 Vue.use(VueRouter);
 
 Vue.component('projects-component', require('./components/ProjectsComponent.vue'));
+Vue.component('user-component', require('./components/NavbarComponent.vue'));
+Vue.component('image-upload', require('./components/ImageUploadComponent.vue'));
 
 import App from './views/App'
 import Home from './views/Home';

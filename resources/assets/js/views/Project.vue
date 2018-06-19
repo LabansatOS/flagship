@@ -1,17 +1,6 @@
 <template>
   <div>
-    <div class="navbar">
-      <!-- <img class="navbar__logo" src="http://flagship.mx/wp-content/uploads/2018/03/LogoMakr_6WpvRA-e1520960282853.png"> -->
-      <div class="navbar__logo" style="color: black;" @click="$router.push({ path: '/' })">
-          Flagship
-      </div>
-      <div class="navbar__search">
-
-      </div>
-      <div class="navbar__links">
-
-      </div>
-    </div>  
+    <user-component color="black"></user-component>
     <div class="project-wrapper">
       <div class="project">
         <div class="project__title">
@@ -33,7 +22,7 @@
               Meta: ${{ project.objective }}
             </div>
             <div class="project__button">
-              Contribuir
+              Quiero invertir
             </div>
             <div class="bar" style="margin-top: 50px;">
               <div class="bar__current" style="min-width: 50%;">
