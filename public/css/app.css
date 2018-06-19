@@ -11040,7 +11040,7 @@ a.text-dark:focus {
 }
 
 .bar__current {
-  background-color: v;
+  background-color: green;
   min-height: 100%;
 }
 

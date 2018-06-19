@@ -44,13 +44,13 @@
           </div>
           <div class="project-card__bar">
             <div class="bar">
-              <div class="bar__current" style="min-width: 50%;">
+              <div class="bar__current" :style="{minWidth: Number(((project.total / project.objective) * 100).toFixed(1)) + '%'}">
               </div>
             </div>
           </div>
           <div class="project-card__stats">
             <div class="project-card__stat">
-              0%
+              {{ Number(((project.total / project.objective) * 100).toFixed(1)) }} %
                <span>completado</span>
             </div>
             <div class="project-card__stat">
